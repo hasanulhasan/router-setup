@@ -2,6 +2,7 @@
   text-decoration: none;
   font-size: 25px;
   margin-left: 15px;
+  font-weight: bolder;
 }
 
 .header a:hover {
