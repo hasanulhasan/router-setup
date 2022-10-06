@@ -13,3 +13,7 @@
   background-color: beige;
   text-align: center;
 }
+
+.if-active {
+  background-color: aqua;
+}
