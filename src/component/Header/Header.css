@@ -1,0 +1,15 @@
+.header a {
+  text-decoration: none;
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+.header a:hover {
+  color: rgb(216, 58, 58);
+}
+
+.header {
+  padding: 10px;
+  background-color: beige;
+  text-align: center;
+}
