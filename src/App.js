@@ -6,6 +6,7 @@ import FriendDetails from './component/FriendDetails/FriendDetails';
 import Friends from './component/Friends/Friends';
 import Home from './component/Home/Home';
 import Main from './component/Layout/Main';
+import Postdetails from './component/Postdetails/Postdetails';
 import Posts from './component/Posts/Posts';
 import Products from './component/Products/Products';
 
@@ -44,6 +45,13 @@ function App() {
             return fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`)
           },
           element: <FriendDetails></FriendDetails>
+        },
+        {
+          path: '/post/:postId',
+          loader: async ({ params }) => {
+            return fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
+          },
+          element: <Postdetails></Postdetails>
         }
       ]
     },

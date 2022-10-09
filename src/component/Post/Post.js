@@ -10,9 +10,10 @@ const Post = ({ post }) => {
   }
   return (
     <div className='post'>
-      <h3>{id}- {title}</h3>
-      <p>{body}</p>
-      <button onClick={handleNavigate}>Show details</button>
+      <h3 className='text-2xl text-blue-500'>{id}- {title}</h3>
+      <div className="card-actions justify-end">
+        <button className="btn btn-success mt-3 justify-end " onClick={handleNavigate}>Show details</button>
+      </div>
     </div>
   );
 };

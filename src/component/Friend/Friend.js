@@ -15,11 +15,13 @@ const Friend = ({ friend }) => {
     <div className='mx-auto'>
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="card-title">{username}</h2>
+          <h2 className="card-title text-amber-600 "><Link to={`/friend/${id}`}>{username}</Link></h2>
           <p className='text-2xl'>Name: {name}</p>
           <p className='text-2xl'>Email: {email}</p>
           <div className="card-actions justify-end">
-            <button onClick={() => { alert('this is an alert') }} className="btn btn-primary">Details</button>
+            <button className="btn btn-info">
+              <Link to={`/friend/${id}`}>Details</Link>
+            </button>
           </div>
         </div>
       </div>
