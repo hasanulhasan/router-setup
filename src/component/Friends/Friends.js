@@ -7,7 +7,6 @@ const Friends = () => {
   const friends = useLoaderData();
   return (
     <div>
-      <h1>Your friend number is {friends.length}</h1>
       <div className='friends'>
         {
           friends.map(friend => <Friend key={friend.id} friend={friend}></Friend>)

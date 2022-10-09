@@ -7,7 +7,6 @@ const Posts = () => {
   const posts = useLoaderData();
   return (
     <div>
-      <h1>{posts.length} posts found</h1>
       <div className='posts'>
         {
           posts.map(post => <Post
