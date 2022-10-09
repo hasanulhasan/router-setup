@@ -12,7 +12,7 @@ const Product = ({ product }) => {
           <p>{`${description.slice(0, 100)}...`}</p>
           <p className='text-2xl text-slate-100'>Price: {price}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+            <button for="my-modal" class="btn btn-primary modal-button">Buy Now</button>
           </div>
         </div>
       </div>
