@@ -17,7 +17,13 @@ function App() {
       children: [
         { path: 'home', element: <Home></Home> },
         { path: 'about', element: <About></About> },
-        { path: 'products', element: <Products></Products> },
+        {
+          path: 'products',
+          loader: async () => {
+            return fetch('https://fakestoreapi.com/products')
+          },
+          element: <Products></Products>
+        },
         {
           path: 'posts',
           loader: async () => {
