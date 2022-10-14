@@ -1,8 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
+  const { pathname } = useLocation()
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -11,12 +12,13 @@ const Header = () => {
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal p-0 text-4xl">
-            <li><NavLink className={({ isActive }) => isActive ? 'active' : undefined} to='/home'>Home</NavLink></li>
-            <li><NavLink to='/about'>About</NavLink></li>
-            <li><NavLink to='/products'>Products</NavLink></li>
-            <li><NavLink to='/friends'>Friends</NavLink></li>
-            <li><NavLink to='/posts'>Posts</NavLink></li>
-            <li><NavLink to='/gallery'>Gallery</NavLink></li>
+            <li><NavLink className={pathname === '/' ? 'Isactive' : undefined} to='/'>Home</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'Isactive' : undefined} to='/about'>Log </NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'Isactive' : undefined} to='/products'>Products</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'Isactive' : undefined} to='/friends'>Friends</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'Isactive' : undefined} to='/posts'>Posts</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'Isactive' : undefined} to='/gallery'>Gallery</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'Isactive' : undefined} to='/login'>Log in</NavLink></li>
           </ul>
         </div>
       </div>

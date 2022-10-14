@@ -15,7 +15,7 @@ const Postdetails = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

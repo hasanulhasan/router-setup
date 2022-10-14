@@ -7,6 +7,7 @@ import Friends from './component/Friends/Friends';
 import Gallery from './component/Gallery/Gallery';
 import Home from './component/Home/Home';
 import Main from './component/Layout/Main';
+import LogIn from './component/LogIn/LogIn';
 import Postdetails from './component/Postdetails/Postdetails';
 import Posts from './component/Posts/Posts';
 import Products from './component/Products/Products';
@@ -17,7 +18,7 @@ function App() {
       path: '/',
       element: <Main></Main>,
       children: [
-        { path: 'home', element: <Home></Home> },
+        { path: '/', element: <Home></Home> },
         { path: 'about', element: <About></About> },
         {
           path: 'products',
@@ -32,6 +33,10 @@ function App() {
             return fetch('https://jsonplaceholder.typicode.com/posts')
           },
           element: <Posts></Posts>
+        },
+        {
+          path: 'login',
+          element: <LogIn></LogIn>
         },
         {
           path: 'gallery',
